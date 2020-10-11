@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+table {
+  width: 70%;
+  border-collapse: collapse;
+}
+img {
+margin-top:10px;
+margin-left:1550px;
+margin-bottom:0px;
+}
+th {
+  height: 60px;
+  background-color:#DEB887;
+}
+td {
+  height: 50px;
+}
+
+table, td, th {
+  margin-left:450px;
+  margin-top: 50px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom:50px;
+}
+form {
+margin-top:20px;
+margin-left:800px;
+margin-bottom:40px;
+}
+h1 {
+margin-bottom:100px;
+}
+h2 {
+margin-left:5px;
+margin-bottom:40px;
+margin-top:50px;
+}
+tr:hover {background-color: #edebeb;}
+th {text-align: middle;}
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="theme.css">
+<div class="sidenav">
+  <a href="welcome.jsp">Home</a>
+  <a href="store.php">Stores</a>
+  <a href="customer.php">Customers   </a>
+  <a href="products.php">Products</a>
+</div>
+<img src="logo.png" width="250" height="130">
+<title>Transactions</title>
+<h1>Transactions</h1>
+
+<script>
+function showUser(str) {
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","transactions.php?q="+str,true);
+    xmlhttp.send();
+  }
+}
+</script>
+
+<script>
+function showTransactions(str) {
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var x = document.getElementById("store").value;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+     xmlhttp.open("GET","transactions.php?q="+x+"&a="+str,true);
+    xmlhttp.send();
+  }
+}
+</script>
+
+<script>
+function showTransactions1(str) {
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var x = document.getElementById("store").value;
+    var y = document.getElementById("category").value;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };     xmlhttp.open("GET","transactions.php?q="+x+"&a="+y+"&c="+str,true);
+    xmlhttp.send();
+  }
+}
+</script>
+
+<script>
+function showTransactions2() {
+    var x = document.getElementById("store").value;
+    var y = document.getElementById("category").value;
+    var z = document.getElementById("payment").value;
+    var k = document.getElementById("total_amount").value;
+    var l = document.getElementById("pieces").value;
+    var m = document.getElementById("sdate").value;
+    var n = document.getElementById("edate").value;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+     xmlhttp.open("GET","transactions.php?q="+x+"&a="+y+"&c="+z+"&ta="+k+"&p="+l+"&sd="+m+"&ed="+n,true);
+    xmlhttp.send();
+}
+</script>
+
+<script>
+  function resetfilters() {
+     location.replace("transactions.html")
+  }
+</script>
+
+</head>
+<body>
+
+<style>
+button{
+margin-top:50px;
+margin-left:-50px;
+}
+  form1{
+	position:absolute;
+	margin-left:850px;
+ 	margin-top:10px;
+	margin-bottom:90px;
+  }
+
+  form2{
+        position:absolute;
+        margin-left: 850px;
+        margin-top:10px;
+        margin-bottom:50px;
+  }
+
+  form3{
+    position:absolute;
+    margin-left:850px;
+    margin-top:70px;
+    margin-bottom:50px;
+
+    
+  }
+
+  form4{
+    position:absolute;
+    margin-top: 130px;
+    margin-left:850px;
+    margin-bottom:50px;
+  }
+
+  form5{
+    position:absolute;
+    margin-top: 230px;
+    margin-left:850px;
+    margin-bottom:50px;
+
+  }
+
+  form6{
+    position:absolute;
+    margin-top: 330px;
+    margin-left:850px;
+    margin-bottom:50px;
+
+  }
+
+form7{
+    position:absolute;
+    margin-top: 430px;
+    margin-left:850px;
+    margin-bottom:50px;
+
+  }
+
+ 
+</style>
+<h2>Firstly select a Store:</h2>
+<form1>
+<select id ="store" name="users" onchange="showUser(this.value)">
+  <option value="">Select a store:</option>
+  <option value="1">Store 1</option>
+  <option value="2">Store 2</option>
+  <option value="3">Store 3</option>
+  <option value="4">Store 4</option>
+  <option value="5">Store 5</option>
+  <option value="6">Store 6</option>
+  <option value="7">Store 7</option>
+  <option value="8">Store 8</option>
+  <option value="9">Store 9</option>
+  <option value="10">Store 10</option>
+  </select>
+</form1>
+<br>
+<div id="txtHint"><b> </b></div>
+
+<h2>Now you can choose multiple filters to filter the above transactions:</h2>
+
+<form2>
+<select id ="category" name="categories" onchange="showTransactions(this.value)">
+  <option value="">Select a category:</option>
+  <option value="Fresh_produce">Fresh Produce</option>
+  <option value="Frozen_foods">Frozen Foods</option>
+  <option value="Drinks">Drinks</option>
+  <option value="House_supplies">House Supplies</option>
+  <option value="Personal_care">Personal Care</option>
+  <option value="Pet_care">Pet Care</option>
+  </select>
+</form2>
+<br>
+<div id="txtHint"><b> </b></div>
+
+
+<form3>
+<select id="payment" name="payment" onchange="showTransactions1(this.value)">
+  <option value="">Select a payment method:</option>
+  <option value="Cash">Cash</option>
+  <option value="Card">Card</option>
+  </select>
+</form3>
+<br>
+<div id="txtHint"><b> </b></div>
+
+
+<form4>
+  <label for="ta">Total Amount</label>
+  <input type="text" id="total_amount" name="ta" class='Input-text' placeholder="Insert total amount in €">
+</form4>
+<br>
+<div id="txtHint"><b> </b></div>
+
+
+<form5>
+  <label for="p">Number of pieces</label>
+  <input type="text" id="pieces" name="p" class='Input-text' placeholder="Insert number of pieces">
+</form5>
+<br>
+<div id="txtHint"><b> </b></div>
+
+<form6>
+  <label for="d">Start date</label>
+  <input type="date" id="sdate" name="d" class='Input-text' placeholder="Insert starting date in format YYYY-MM-DD">
+ </form6>
+<br>
+<div id="txtHint"><b> </b></div>
+
+
+<form7>
+  <label for="end">End date</label>
+  <input type="date" id="edate" name="end" class='Input-text' placeholder="Insert ending date in format YYYY-MM-DD">
+   <button onclick="showTransactions2()">Submit</button>
+   <button onclick="resetfilters()">Reset</button>
+</form7>
+<br>
+<div id="txtHint"><b> </b></div>
+
+
+</body>
+</html>

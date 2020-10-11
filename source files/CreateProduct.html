@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<style>
+img {
+margin-top:10px;
+margin-left:1550px;
+margin-bottom:0px;
+}
+
+</style>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>New Product</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<img src="logo.png" width="250" height="130">
+
+<h3>Enter a new product</h3>
+
+<form action="newProduct.php" method="post">
+
+<div class="sidenav">
+  <a href="welcome.jsp">Home</a>
+  <a href="#">Stores</a>
+  <a href="customer.php">Customers   </a>
+  <a href="products.php">Products</a>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td>Product Name:</td>
+<td><input type="text" name="Product_name" class='Input-text' placeholder="Only characters">
+</div>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td>Barcode:</td>
+<input type="text" name="Barcode" class='Input-text' placeholder="Exactly 12 digits">
+</div>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<label style="font-weight: normal;" for="Category_name">Choose Category:</label>
+<select class='Input-text' name="Category_name" id="Category_name">
+	<option value="" disabled selected hidden class='Input-text'>Category Name</option>
+	<option value="Fresh_produce">Fresh Produce</option>
+	<option value="Frozen_foods">Frozen Foods</option>
+	<option value="Drinks">Liquor Store Products</option>
+	<option value="Personal_care">Personal Care</option>
+	<option value="House_supplies">House Supplies</option>
+	<option value="Pet_care">Pet Care</option>
+</select>
+</div>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td>Price:</td>
+<td><input  type="number" placeholder="0,00" name="Price" min="0" step="0.01" class='Input-text' >
+</div>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td> Is it Brand Name? </td>
+<p><input style="margin-top: 10px;" class='w3-radio' type="radio" name="Brand_name" value="yes" checked> YES</p>
+<p><input class="w3-radio" type="radio" name="Brand_name" value="no" checked> NO</p>
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td><input type="submit" name="submit" value="Submit"> </td>
+<td><input type="reset" value="Reset"></td>
+</div>
+</div>
+</form>
+</body>
+</html>

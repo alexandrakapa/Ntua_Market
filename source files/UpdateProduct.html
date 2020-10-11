@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Update Product</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+</head>
+<style>
+img {
+margin-top:10px;
+margin-left:1550px;
+margin-bottom:0px;
+}
+
+</style>
+<body>
+<img src="logo.png" width="250" height="130">
+<h3>Update an existing product</h3>
+
+<form action="ProductUpdate.php" method="post">
+
+<div class="sidenav">
+  <a href="welcome.jsp">Home</a>
+  <a href="store.php">Stores</a>
+  <a href="customer.php">Customers</a>
+  <a href="products.php">Products</a>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td>Enter the Barcode of the product you want to update:</td>
+<input type="text" name="Current_Barcode" class='Input-text' placeholder="Exactly 12 digits">
+</div>
+</div>
+
+<hr style="height:2px;border-width:0;color:gray;background-color:maroon">
+
+<div class='container'>
+<div class='Input'>
+<td>New Price:</td>
+<td><input  type="number" placeholder="0,00" name="NewPrice" min="0" step="0.01" >
+</div>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td><input type="submit" name="submit" value="Submit"> </td>
+<td><input type="reset" value="Reset"></td>
+</div>
+</div>
+</form>
+</body>
+</html>

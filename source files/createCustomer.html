@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<style>
+img {
+margin-top:10px;
+margin-left:1550px;
+margin-bottom:0px;
+}
+
+</style>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>New customer</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<img src="logo.png" width="250" height="130">
+<h3>Enter a new customer</h3>
+
+<form action="newCustomer.php" method="post">
+
+<div class="sidenav">
+  <a href="welcome.jsp">Home</a>
+  <a href="#">Stores</a>
+  <a href="customer.php">Customers   </a>
+  <a href="products.php">Products</a>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td>Card id:</td>
+<input type="text" name="Card_id" class='Input-text' placeholder="Exactly 5 digits">
+</div>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td>First name:</td>
+<td><input type="text" name="Name" class='Input-text' placeholder="Only characters">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>Last name:</td>
+<td><input type="text" name="Last_name" class='Input-text' placeholder="Only characters">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>Date of birth:</td>
+<td><input type="date" name="Date_of_birth" class='Input-text'>
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>Street:</td>
+<td><input type="text" name="Street" class='Input-text' placeholder="Only characters">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>Street number:</td>
+<td><input type="text" name="Number" class='Input-text' placeholder="Only digits">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>City:</td>
+<td><input type="text" name="City" class='Input-text' placeholder="Only characters">
+</div>
+</div>
+
+<div class='container'>
+<div class='Input'>
+<td>Postal code:</td>
+<td><input type="text" name="Postal_code" class='Input-text' placeholder="Exactly 5 digits">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>E-mail:</td>
+<td><input type="text" name="E_mail" class='Input-text' placeholder="Please give a valid e-mail">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>Phone number:</td>
+<td><input type="text" name="Phone_number" class='Input-text' placeholder="Exactly 10 digits">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>Family members:</td>
+<td><input type="text" name="Family_members" class='Input-text' placeholder="Only digits">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td>Number of pets:</td>
+<td><input type="text" name="Pets" class='Input-text' placeholder="Only digits">
+</div>
+</div>
+
+
+<div class='container'>
+<div class='Input'>
+<td><input type="submit" name="submit" value="Submit"> </td>
+<td><input type="reset" value="Reset"></td>
+</div>
+</div>
+</form>
+</body>
+</html>
