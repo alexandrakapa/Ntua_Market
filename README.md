@@ -1,4 +1,2 @@
-
-
-Databases project for ece ntua 2019
+*Databases project for ece ntua 2019
 
