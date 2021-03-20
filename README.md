@@ -10,6 +10,6 @@ The aim of the project was to implement a super market system.
 * [Liagka Katerina](https://github.com/LiagkaAikaterini)
 
 ## Stack:
-Database: MySQL
+* Database: MySQL
 
-Backend-Frontend : PHP,Java,HTML,CSS
+* Backend-Frontend : PHP,Java,HTML,CSS
