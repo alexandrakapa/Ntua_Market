@@ -11,4 +11,5 @@ The aim of the project was to implement a super market system.
 
 ## Stack:
 Database: MySQL
+
 Backend-Frontend : PHP,Java,HTML,CSS
